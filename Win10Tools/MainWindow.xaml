@@ -1,0 +1,27 @@
+﻿<hc:Window x:Class="Win10Tools.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Win10Tools"
+        xmlns:userControl="clr-namespace:Win10Tools.UserControl"
+        xmlns:hc="https://handyorg.github.io/handycontrol"
+        ShowTitle="False"
+        Background="{DynamicResource SecondaryRegionBrush}"
+        ResizeMode="CanResizeWithGrip"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="240" MinWidth="240" MaxWidth="400"/>
+            <ColumnDefinition MinWidth="200"/>
+        </Grid.ColumnDefinitions>
+        <userControl:LeftMainContent/>
+        <userControl:MainContent Grid.Column="1"/>
+        <GridSplitter Margin="0,26,10,26" Grid.Column="0" HorizontalAlignment="Right" Width="4" Background="Transparent"/>
+        <hc:ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Hidden" HorizontalAlignment="Right" IsInertiaEnabled="True" IsPenetrating="True">
+            <StackPanel hc:Growl.GrowlParent="True" VerticalAlignment="Top" Margin="0,10,10,10"/>
+        </hc:ScrollViewer>
+    </Grid>
+</hc:Window>

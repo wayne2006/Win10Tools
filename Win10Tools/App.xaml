@@ -1,0 +1,32 @@
+﻿<Application x:Class="Win10Tools.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Win10Tools"
+             xmlns:hc="https://handyorg.github.io/handycontrol" 
+             xmlns:langs="clr-namespace:Win10Tools.Langs"
+             xmlns:viewModel="clr-namespace:Win10Tools.ViewModel"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:d1P1="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             d1P1:Ignorable="d" 
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <ResourceDictionary.MergedDictionaries>
+                        <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/SkinDefault.xaml"/>
+                        <ResourceDictionary Source="Resources/Themes/SkinDefault.xaml"/>
+                    </ResourceDictionary.MergedDictionaries>
+                </ResourceDictionary>
+                <ResourceDictionary>
+                    <ResourceDictionary.MergedDictionaries>
+                        <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/Theme.xaml"/>
+                        <ResourceDictionary Source="Resources/Themes/Theme.xaml"/>
+                    </ResourceDictionary.MergedDictionaries>
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+            <langs:LangProvider x:Key="Win10ToolsLangs"/>
+            <viewModel:ViewModelLocator x:Key="Locator" d:IsDataSource="True"/>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
